@@ -62,6 +62,18 @@ export class PreloadScene extends Phaser.Scene {
     playerG.fillCircle(12, 9, 2.5);
     playerG.generateTexture('player', 24, 24);
     playerG.destroy();
+
+    // --- Enemy: 22x22 dark-red circle with menacing dot ---
+    const enemyG = this.make.graphics({ x: 0, y: 0 }, false);
+    enemyG.fillStyle(0xc0392b, 1);
+    enemyG.fillCircle(11, 11, 10);
+    enemyG.lineStyle(2, 0x3a0f0a, 1);
+    enemyG.strokeCircle(11, 11, 10);
+    enemyG.fillStyle(0xffe066, 1);
+    enemyG.fillCircle(8, 9, 1.5);
+    enemyG.fillCircle(14, 9, 1.5);
+    enemyG.generateTexture('enemy', 22, 22);
+    enemyG.destroy();
   }
 
   private drawProgressBar(): void {
